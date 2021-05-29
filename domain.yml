@@ -1,0 +1,56 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - introduce
+  - service
+  - pentest
+  - cloud
+  - consulting
+
+responses:
+  utter_greet:
+  - text: "Chào bạn, chúng tôi có thể giúp gì không ạ?"
+  - text: "Chào mừng bạn đã đến! Tôi có thể giúp gì không?"
+
+  utter_perceive:
+  - text: "Okay chúng tôi đã hiểu và tiếp nhận vấn đề!"
+
+  utter_cheer_up:
+  - text: "Chúng tôi rất tiếc về điều đó. Chúng tôi sẽ có biện pháp khắc phục sớm nhất trong thời gian tới"
+
+  utter_ask_for_clear:
+  - text: "Vậy bạn có thể giải thích rõ ràng bạn đang cần gì không ạ?"
+
+  utter_happy:
+  - text: "Xin chân thành cảm ơn quý khách"
+  - text: "Cảm ơn bạn vì lời khen"
+  - text: "Sự hài lòng của bạn là niềm hạnh phúc của chúng tôi"
+
+  utter_goodbye:
+  - text: "Tạm biệt quý khách"
+  - text: "Rất mong được phục vụ bạn trong lần tiếp theo!"
+
+  utter_iamabot:
+  - text: "Chúng tôi là SAS, một đơn vị trực thuộc FPT Software, chuyên cung cấp các dịch vụ về an ninh mạng."
+
+  utter_service_list:
+  - text: "Ở đây chúng tôi chuyên về 3 dịch vụ bảo mật là Security Consulting, Penestration Testing và Cloud Security. Không biết bạn muốn sử dụng dịch vụ nào?"
+
+  utter_pentest:
+  - text: "Dịch vụ Penestration Testing tại SAS nhắm đến kiểm thử xâm nhập trên 3 đối tượng: Web Application, Mobile Application, Network. Bạn muốn chúng tôi pentest đối tượng nào?"
+  
+  utter_cloud:
+  - text: "Dịch vụ Cloud Security tại SAS nhắm đến đánh giá, thẩm định 2 đối tượng: Cloud Platform, Compliance Gap. Bạn muốn chúng tôi đánh giá đối tượng nào?"
+
+  utter_consulting:
+  - text: "Bạn có thể gọi vào số máy sau để được chúng tôi tư vấn và hỗ trợ về giải pháp bảo mật"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
