@@ -1,0 +1,123 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - xin chào
+    - bắt đầu
+    - cho tôi hỏi
+    - hello
+    - chào ngày mới
+    - chào buổi sáng
+    - chào buổi chiều
+    - chào buổi tối
+    - alo
+    - kích hoạt
+
+- intent: goodbye
+  examples: |
+    - Kết thúc
+    - Hẹn gặp lại
+    - Tạm biệt
+    - Bai bai
+    - Bye
+    - Chúc ngủ ngon
+
+- intent: affirm
+  examples: |
+    - có
+    - yes
+    - tất nhiên
+    - hiển nhiên
+    - hay đấy
+    - chính xác
+    - chính nó
+    - đúng rồi
+    - chuẩn
+    - đúng ý
+    - chuẩn
+    - yea
+    - hiểu đúng rồi
+
+- intent: deny
+  examples: |
+    - không
+    - ko
+    - không bao giờ
+    - khum
+    - no
+    - không phải như vậy
+    - sai rồi
+    - không đúng
+    - không hẳn
+    - chưa đúng lắm
+    - hiểu sai rồi
+
+- intent: mood_great
+  examples: |
+    - hoàn hảo
+    - tuyệt
+    - tuyệt vời
+    - tôi đang cảm thấy rất tốt
+    - quá hoàn hảo 
+    - quá tốt
+    - rất hay
+    - thông minh
+
+- intent: mood_unhappy
+  examples: |
+    - một ngày tệ hại
+    - tôi rất buồn
+    - tôi thấy không tốt lắm
+    - tôi thấy thất vọng
+    - quá buồn
+    - rất buồn
+    - buồn
+    - không tốt
+    - chưa tốt lắm
+    - cực kì thất vọng
+    - tôi quá thất vọng vì dịch vụ của bạn 
+
+- intent: introduce
+  examples: |
+    - Cho tôi xin thông tin về doanh nghiệp bạn
+    - Tên bạn là gì
+    - Giới thiệu về doanh nghiệp
+
+- intent: service
+  examples: |
+    - Tôi muốn thuê
+    - Đặt hàng
+    - Sử dụng dịch vụ
+    - Sản phẩm của các bạn là gì?
+    - security
+
+- intent: pentest
+  examples: |
+    - pentest
+    - tôi muốn sử dụng dịch vụ pentest
+    - kiểm thử
+    - tôi muốn sử dụng dịch vụ kiểm thử
+    - dịch vụ kiểm thử xâm nhập
+
+- intent:  cloud
+  examples: |
+    - cloud
+    - cloud security
+    - cloud platform
+    - tôi có một cloud platform
+    - compliance
+    - rule
+    - tôi muốn sử dụng dịch vụ cloud security
+    - dịch vụ cloud security
+    - nền tảng đám mây
+    - bảo mật trên nền tảng đám mây
+    
+- intent: consulting
+  examples: |
+    - tư vấn
+    - tư vấn bảo mật
+    - giải pháp
+    - gọi điện trực tiếp
+    - đưa ra các giải pháp
+    
