@@ -2,12 +2,47 @@ version: "2.0"
 
 rules:
 
+- rule: Say hello anytime the user says hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say hello anytime the user says hello
+- rule: Feel happy when user praise
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  
+- rule: Feel sorry when user criticize
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+
+- rule: Introduce whenever user ask who u are 
+  steps:
+  - intent: introduce
+  - action: utter_iamabot
+
+- rule: ask for clear when user deny
+  steps:
+  - intent: deny
+  - action: utter_ask_for_clear
+
+- rule: perceive when understanding  
+  steps:
+  - intent: affirm
+  - action: utter_perceive
+
+- rule: service
+  steps:
+  - intent: service
+  - action: utter_service_list
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
