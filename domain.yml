@@ -14,43 +14,95 @@ intents:
   - consulting
 
 responses:
+  utter_please_rephrase:
+  - buttons:
+    - payload: /greet
+      title: xin chào
+    - payload: /introduce
+      title: tên bạn là gì?
+    - payload: /service
+      title: dịch vụ
+    text: Xin lỗi, tôi đang không hiểu bạn đang nói về vấn đề gì. Bạn có thể nói rõ ràng hơn hoặc sử dụng một trong các gợi ý sau được không?
   utter_greet:
-  - text: "Chào bạn, chúng tôi có thể giúp gì không ạ?"
-  - text: "Chào mừng bạn đã đến! Tôi có thể giúp gì không?"
-
+  - text: Chào bạn, chúng tôi có thể giúp gì không ạ?
+  - text: Chào mừng bạn đã đến! Tôi có thể giúp gì không?
   utter_perceive:
-  - text: "Okay chúng tôi đã hiểu và tiếp nhận vấn đề!"
-
+  - text: Okay chúng tôi đã hiểu và tiếp nhận vấn đề!
   utter_cheer_up:
-  - text: "Chúng tôi rất tiếc về điều đó. Chúng tôi sẽ có biện pháp khắc phục sớm nhất trong thời gian tới"
-
+  - text: Chúng tôi rất tiếc về điều đó. Chúng tôi sẽ có biện pháp khắc phục sớm nhất trong thời gian tới
   utter_ask_for_clear:
-  - text: "Vậy bạn có thể giải thích rõ ràng bạn đang cần gì không ạ?"
-
+  - text: Vậy bạn có thể giải thích rõ ràng bạn đang cần gì không ạ?
   utter_happy:
-  - text: "Xin chân thành cảm ơn quý khách"
-  - text: "Cảm ơn bạn vì lời khen"
-  - text: "Sự hài lòng của bạn là niềm hạnh phúc của chúng tôi"
-
+  - text: Xin chân thành cảm ơn quý khách
+  - text: Cảm ơn bạn vì lời khen
+  - text: Sự hài lòng của bạn là niềm hạnh phúc của chúng tôi
   utter_goodbye:
-  - text: "Tạm biệt quý khách"
-  - text: "Rất mong được phục vụ bạn trong lần tiếp theo!"
-
+  - text: Tạm biệt quý khách
+  - text: Rất mong được phục vụ bạn trong lần tiếp theo!
   utter_iamabot:
-  - text: "Chúng tôi là SAS, một đơn vị trực thuộc FPT Software, chuyên cung cấp các dịch vụ về an ninh mạng."
-
+  - text: Chúng tôi là SAS, một đơn vị trực thuộc FPT Software, chuyên cung cấp các dịch vụ về an ninh mạng.
   utter_service_list:
-  - text: "Ở đây chúng tôi chuyên về 3 dịch vụ bảo mật là Security Consulting, Penestration Testing và Cloud Security. Không biết bạn muốn sử dụng dịch vụ nào?"
-
+  - buttons:
+    - payload: /pentest
+      title: Penetration Testing
+    - payload: /cloud
+      title: Cloud Security
+    - payload: /consulting
+      title: Security Consulting
+    text: Ở đây chúng tôi chuyên về 3 dịch vụ bảo mật. Không biết bạn muốn sử dụng dịch vụ nào?
   utter_pentest:
-  - text: "Dịch vụ Penestration Testing tại SAS nhắm đến kiểm thử xâm nhập trên 3 đối tượng: Web Application, Mobile Application, Network. Bạn muốn chúng tôi pentest đối tượng nào?"
-  
+  - buttons:
+    - payload: /pen_web
+      title: Website
+    - payload: /pen_mobile
+      title: Ứng dụng mobile
+    - payload: /pen_network
+      title: Hệ thống mạng
+    text: Dịch vụ Penetration Testing tại SAS nhắm đến kiểm thử xâm nhập trên 3 đối tượng. Bạn muốn chúng tôi pentest đối tượng nào?
+  utter_web:
+  - buttons:
+    - payload: /web_submitted
+      title: Tôi đã điền
+    text: 'Xin anh/chị điền vào form sau để chúng tôi có thể triển khai pentest web: <link microsoft form>'
+  utter_web_contact:
+  - text: Cảm ơn anh/chị đã cung cấp thông tin, chúng tôi sẽ nhanh chóng triển khai thực hiện. Anh/chị cũng có thể liên hệ với đại diện của đội pentest web bên phía chúng tôi tại <link wp> để tiện cho việc giải quyết các vấn đề phát sinh.
+  utter_app:
+  - buttons:
+    - payload: /mobile_submitted
+      title: Tôi đã điền
+    text: 'Xin anh/chị điền vào form sau để chúng tôi có thể triển khai pentest mobile app: <link microsoft form>'
+  utter_app_contact:
+  - text: Cảm ơn anh/chị đã cung cấp thông tin, chúng tôi sẽ nhanh chóng triển khai thực hiện. Anh/chị cũng có thể liên hệ với đại diện của đội pentest mobile app bên phía chúng tôi tại <link wp> để tiện cho việc giải quyết các vấn đề phát sinh.
+  utter_network:
+  - buttons:
+    - payload: /net_submitted
+      title: Tôi đã điền
+    text: 'Xin anh/chị điền vào form sau để chúng tôi có thể triển khai pentest network: <link microsoft form>'
+  utter_network_contact:
+  - text: Cảm ơn anh/chị đã cung cấp thông tin, chúng tôi sẽ nhanh chóng triển khai thực hiện. Anh/chị cũng có thể liên hệ với đại diện của đội pentest network bên phía chúng tôi tại <link wp> để tiện cho việc giải quyết các vấn đề phát sinh.
   utter_cloud:
-  - text: "Dịch vụ Cloud Security tại SAS nhắm đến đánh giá, thẩm định 2 đối tượng: Cloud Platform, Compliance Gap. Bạn muốn chúng tôi đánh giá đối tượng nào?"
-
+  - buttons:
+    - payload: /platform
+      title: Cloud Platform
+    - payload: /compliance 
+      title: Compliance Gap
+    text: 'Dịch vụ Cloud Security tại SAS nhắm đến đánh giá, thẩm định 2 đối tượng: Cloud Platform, Compliance Gap. Bạn muốn chúng tôi đánh giá đối tượng nào?'
+  utter_platform:
+  - buttons:
+    - payload: /platform_submitted
+      title: Tôi đã điền
+    text: 'Xin anh/chị điền vào form sau để chúng tôi có thể triển khai đánh giá cloud platform: <link microsoft form>'
+  utter_platform_contact:
+  - text: Cảm ơn anh/chị đã cung cấp thông tin, chúng tôi sẽ nhanh chóng triển khai thực hiện. Anh/chị cũng có thể liên hệ với đại diện của đội đánh giá cloud platform bên phía chúng tôi tại <link wp> để tiện cho việc giải quyết các vấn đề phát sinh.
+  utter_compliance:
+  - buttons:
+    - payload: /compliance_submitted
+      title: Tôi đã điền
+    text: 'Xin anh/chị điền vào form sau để chúng tôi có thể triển khai đánh giá compliance gap: <link microsoft form>'
+  utter_compliance_contact:
+  - text: Cảm ơn anh/chị đã cung cấp thông tin, chúng tôi sẽ nhanh chóng triển khai thực hiện. Anh/chị cũng có thể liên hệ với đại diện của đội đánh giá compliance gap bên phía chúng tôi tại <link wp> để tiện cho việc giải quyết các vấn đề phát sinh.
   utter_consulting:
-  - text: "Bạn có thể gọi vào số máy sau để được chúng tôi tư vấn và hỗ trợ về giải pháp bảo mật"
-
+  - text: Bạn có thể gọi vào số máy sau để được chúng tôi tư vấn và hỗ trợ về giải pháp bảo mật
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
