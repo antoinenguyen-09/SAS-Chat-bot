@@ -1,47 +1,61 @@
 version: "2.0"
 
-stories:
+stories: 
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-  
-- story: sad path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  
-- story: boolean path
-  steps:
-  - intent: deny
-  - action: utter_ask_for_clear
-  - intent: affirm
-  - action: utter_perceive
-
-- story: introduce path
-  steps:
-  - intent: introduce
-  - action: utter_iamabot
-  
-- story: ask service path
-  steps:
-  - intent: service
-  - action: utter_service_list 
-
-- story: service intro path
+# pentest stories zone
+- story: penetration
   steps:
   - intent: pentest
   - action: utter_pentest
+
+# 1) pentest web story
+- story: pentest web
+  steps:
+  - intent: pen_web
+  - action: utter_web
+  - intent: web_submitted
+  - action: utter_web_contact
+
+# 2) pentest mobile app story
+- story: pentest mobile
+  steps:
+  - intent: pen_mobile
+  - action: utter_app
+  - intent: mobile_submitted
+  - action: utter_app_contact
+
+# 3) pentest network story
+- story: pentest network
+  steps:
+  - intent: pen_network
+  - action: utter_network
+  - intent: net_submitted
+  - action: utter_network_contact 
+
+# cloud stories zone
+- story: cloud
+  steps:
   - intent: cloud
   - action: utter_cloud
 
+# 1) cloud platform story
+- story: cloud platform
+  steps: 
+  - intent: platform
+  - action: utter_platform
+  - intent: platform_submitted
+  - action: utter_platform_contact
+
+# 2) compliance gap story
+- story: compliance gap
+  steps: 
+  - intent: compliance
+  - action: utter_compliance
+  - intent: compliance_submitted
+  - action: utter_compliance_contact
+
+# consulting stories zone
 - story: consulting
   steps:
   - intent: consulting
   - action: utter_consulting
-
