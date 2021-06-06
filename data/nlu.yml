@@ -1,6 +1,7 @@
 version: "2.0"
 
 nlu:
+# greeting/chitchat intents
 - intent: greet
   examples: |
     - xin chào
@@ -25,7 +26,6 @@ nlu:
 
 - intent: affirm
   examples: |
-    - có
     - yes
     - tất nhiên
     - hiển nhiên
@@ -38,13 +38,12 @@ nlu:
     - chuẩn
     - yea
     - hiểu đúng rồi
+    - oke
 
 - intent: deny
   examples: |
     - không
-    - ko
     - không bao giờ
-    - khum
     - no
     - không phải như vậy
     - sai rồi
@@ -63,6 +62,7 @@ nlu:
     - quá tốt
     - rất hay
     - thông minh
+    - tốt lắm
 
 - intent: mood_unhappy
   examples: |
@@ -78,6 +78,7 @@ nlu:
     - cực kì thất vọng
     - tôi quá thất vọng vì dịch vụ của bạn 
 
+# introduce intents
 - intent: introduce
   examples: |
     - Cho tôi xin thông tin về doanh nghiệp bạn
@@ -89,9 +90,17 @@ nlu:
     - Tôi muốn thuê
     - Đặt hàng
     - Sử dụng dịch vụ
-    - Sản phẩm của các bạn là gì?
+    - Sản phẩm của các bạn là gì
     - security
+    - dịch vụ
+    - Bên mình có dịch vụ gì
+    - Phục vụ
+    - Bạn có thể làm gì
+    - chuyên về mảng gì
+    - chuyên về lĩnh vực gì
+    - bảo mật
 
+# pentest intents zone
 - intent: pentest
   examples: |
     - pentest
@@ -100,7 +109,61 @@ nlu:
     - tôi muốn sử dụng dịch vụ kiểm thử
     - dịch vụ kiểm thử xâm nhập
 
-- intent:  cloud
+# 1) pentest web intents
+- intent: pen_web
+  examples: |
+    - kiểm thử website 
+    - xâm nhập website
+    - website
+    - trang web
+    - tìm bug trong website
+    - đánh giá bảo mật của website
+    - pentest web
+
+- intent: web_submitted
+  examples: |
+    - Tôi đã điền vào form cung cấp thông tin cho các bạn pentest web.
+    - Tôi đã điền vào pentest web form.
+
+# 2) pentest mobile app intents
+- intent: pen_mobile
+  examples: |
+    - kiểm thử ứng dụng mobile
+    - kiểm thử mobile app
+    - mobile
+    - Android
+    - IOS
+    - ứng dụng
+    - đánh giá bảo mật của app
+    - ứng dụng điện thoại
+    - tìm bug trong mobile app
+    - pentest mobile app
+
+- intent: mobile_submitted
+  examples: |
+    - Tôi đã điền vào form cung cấp thông tin cho các bạn pentest mobile app.
+    - Tôi đã điền vào pentest mobile app form.
+
+# 3) pentest network intents
+- intent: pen_network
+  examples: |
+    - kiểm thử mạng
+    - pentest mạng
+    - kiểm thử network
+    - pentest network
+    - đánh giá bảo mật của hạ tầng mạng
+    - kiểm thử hạ tầng viễn thông
+    - kiểm thử hạ tầng mạng
+    - mạng
+    - viễn thông
+
+- intent: net_submitted
+  examples: |
+    - Tôi đã điền vào form cung cấp thông tin cho các bạn pentest network.
+    - Tôi đã điền vào pentest network form.
+
+# cloud intents zone
+- intent: cloud
   examples: |
     - cloud
     - cloud security
@@ -109,10 +172,33 @@ nlu:
     - compliance
     - rule
     - tôi muốn sử dụng dịch vụ cloud security
-    - dịch vụ cloud security
+    - dịch vụ cloud
     - nền tảng đám mây
     - bảo mật trên nền tảng đám mây
-    
+
+# 1) cloud platform intents
+- intent: platform
+  examples: |
+    - đánh giá cloud platform
+    - thẩm định cloud platform
+
+- intent: platform_submitted
+  examples: | 
+    - Tôi đã điền vào form cung cấp thông tin cho các bạn đánh giá cloud platform.
+    - Tôi đã điền vào cloud platform assessment form.
+
+# 2) compliance gap intents
+- intent: compliance 
+  examples: |
+    - đánh giá compliance gap
+    - thẩm định compliance gap
+
+- intent: compliance_submitted
+  examples: | 
+    - Tôi đã điền vào form cung cấp thông tin cho các bạn đánh giá compliance gap.
+    - Tôi đã điền vào compliance gap assessment form.
+
+# consulting intents zone
 - intent: consulting
   examples: |
     - tư vấn
@@ -120,4 +206,3 @@ nlu:
     - giải pháp
     - gọi điện trực tiếp
     - đưa ra các giải pháp
-    
